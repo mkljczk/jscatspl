@@ -52,49 +52,76 @@
 <h2 id="-a-id-basics-href-basics-a-podstawy"><a id="basics" href="#basics">#</a> Podstawy</h2>
 <p>Na tej stronie działa JavaScript. Pobawmy się nim trochę. Dla uproszczenia zakładam, że korzystasz z Google Chrome (lub pochodnej, np. Opera, Chromium, Vivaldi…), jeżeli nie, będzie nam łatwiej, jeżeli będziesz korzystać z Chrome.</p>
 <p>Na początek, naciśnij prawym przyciskiem na stronie i wybierz <strong>Zbadaj element</strong>, następnie przejdź do karty <strong>Konsola</strong>. Powinieneś zobaczyć coś takiego:</p>
-<p><img src="images/console.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/console.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p>Jest to konsola, zwana często „wierszem poleceń” lub „terminalem”. Pozwala na wprowadzenie polecenia, na które dostaniemy natychmiastową odpowiedź. Jest bardzo użytecznym narzędziem do nauki (nadal korzystam z konsoli prawie każdego dnia, kiedy programuję).</p>
 <p>W konsoli możemy zrobić trochę fajnych rzeczy. Gdy zacznę pisać, konsola podpowiada mi, jakie polecenia istnieją! Zobacz, co się stanie, gdy wpiszesz ‘1 + 1’ i naciśniesz Enter.</p>
 <p>Korzystanie z konsoli jest ważnym elementem nauki JavaScript. Jeżeli nie wiesz, jak coś działa lub jakiego polecenia chcesz użyć, przejdź do konsoli i wypróbuj to! Przykład:</p>
 <h3 id="-a-id-strings-href-strings-a-ci-gi-znak-w"><a id="strings" href="#strings">#</a> Ciągi znaków</h3>
 <p>Będąc kotem, chcesz zastąpić wszystkie wystąpienia słowa „psy” w Internecie frazą „te podłe kundle”. Na początek wprowadź w konsolę kilka zdań zawierających słowo „psy” przynajmniej raz. W JavaScript, zbiór liter, cyfr i innych znaków nazywany jest <strong>ciągiem znaków</strong> (z ang. <em>string</em>). Ciągi znaków muszą zaczynać się I kończyć znakiem cudzysłowiu. Dozwolony jest zarówno pojedynczy (<code>&#39;</code>), jak i podwójny (<code>&quot;</code>), ale pamiętaj, aby użyć tego samego znaku na początku i na końcu.</p>
-<p><img src="images/console-strings.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/console-strings.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p>Widzisz tą okropną wiadomość o błędzie? Nie martw się – nie zrobiłeś nic nielegalnego. SyntaxError ILLEGAL jest jedynie komunikatem oznaczającym błąd w programie. Pierwsze dwa zdania miały pasujące znaki cudzysłowiu, ale łącząc oba, napotkał mnie błąd.</p>
 <p>Dobrze, aby naprawić te zdania (zastępując „psy” naszą poprawioną wersją), musimy zapisać oryginalne zdania, aby wywołać je później w trakcie magicznego zastępowania. Zauważyłeś, że ciąg znaków jest powtarzany, kiedy wprowadzisz go w konsolę? To dlatego, że nie kazaliśmy zapisać komputerowi tego zdania, więc powraca ono do nas (lub pojawia się komunikat o błędzie, jeżeli zrobiliśmy coś nie tak).</p>
 <h3 id="-a-id-values-href-values-a-warto-ci-i-zmienne"><a id="values" href="#values">#</a> Wartości i zmienne</h3>
 <p><strong>Wartości</strong> (z ang. <em>values</em>) są najprostszymi komponentami w JavaScript. <code>1</code> jest wartością, <code>true</code> jest wartością, <code>&quot;hello&quot;</code> jest wartością, <code>function() {}</code> jest wartością, a lista jest jeszcze dłuższa! Jest wiele różnych <strong>typów</strong> wartości w JavaScript, ale nie musisz ich jeszcze znać &mdash; poznasz je w trakcie dalszej nauki, w miarę potrzeb.</p>
 <p>Do przechowywania wartości używamy <strong>zmiennych</strong> (po ang. <em>variable</em>). Zmienna może przechowywać różne typy wartości, które mogą być zmieniane wielokrotnie. To tak jak skrzynki pocztowe. Przechowujemy coś w zmiennej, np. zdanie i przekazujemy zmiennej adres, którego możemy użyć później. W rzeczywistości skrzynki pocztowe posiadają swój numer, ale w JavaScript może to być dowolny ciąg małych liter i cyfr, bez spacji.</p>
-<p><img src="images/console-variables.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/console-variables.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p><code>var</code> jest skrótem wyrazu “variable”, a <code>=</code> oznacza <em>przechowaj wartość po prawej stronie w zmiennej po lewej stronie znaku</em>. Dodatkowo, jak mogłeś zauważyć, ponieważ przechowujemy wartość w zmiennej, konsola nie zwraca wpisanego zdania, lecz <code>undefined</code> (nieokreślony) co w tym przypadku oznacza <em>brak wartości do zwrócenia</em>.</p>
 <p>Jeżeli wprowadzisz nazwę wartości w konsolę, zostanie wyświetlona jej wartość. Przechowywane wartości zostaną utracone, jeżeli zmienisz stronę. Dla przykładu, jeżeli odświeżę stronę, moja zmienna <code>dogSentence</code> zostanie wyczyszczona i przestanie istnieć. Nie przejmuj się tym na razie &mdash; używając klawiszy strzałek możesz powtórzyć ostatnio wykonywane polecenia.</p>
 <h3 id="-a-id-functions-href-functions-a-funkcje"><a id="functions" href="#functions">#</a> Funkcje</h3>
 <p>Ponieważ przechowujemy już wartość w zmiennej, teraz zmieńmy jej wartość! Możemy użyć do tego <em>funkcji</em> (<em>function</em>). Funkcje to rodzaje wartości, spełniające określone zadanie (akcję).</p>
 <p>JavaScript posiada funkcję o nazwie <code>replace</code>, która robi dokładnie to, czego oczekujemy! Funkcje przyjmują dowolną liczbę parametrów w nawiasach (zero, jedną lub więcej) i zwracają albo <code>undefined</code>, albo zmieniony ciąg znaków lub inną wartość. Funkcja <code>replace</code> może być używana na każdym ciągu znaków i wymaga podania dwóch wartości: ciąg znaków do usunięcia i ciąg znaków, który go zastąpi. Może to być ciężkie do zrozumienia, więc spójrz na przykład:</p>
-<p><img src="images/console-replace.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/console-replace.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p>Zauważyłeś, że <code>dogSentence</code> nie zmienia się po wykonaniu <code>replace</code>? To dlatego, że <code>replace</code>, (i większość podobnych funkcji) pobiera wartość i zwraca <strong>nową wartość</strong>, bez modyfikacji przekazanej. Ponieważ nie przekazaliśmy wyniki działania funkcji (brak <code>=</code> przed funkcją <code>replace</code>) wynik został jedynie przedstawiony w konsoli.</p>
 <h3 id="-a-id-standard-library-href-standard-library-a-biblioteka-standardowa-"><a id="standard-library" href="#standard-library">#</a> „Biblioteka standardowa”</h3>
 <p>Możesz zastanawiać się, ile (i jakie) funkcji znajduje się jeszcze w JavaScript. Odpowiedź: DUUUUŻO!  Jest wiele <strong>wbudowanych, ustandaryzowanych bibliotek</strong>, o których możesz dowiedzieć się na MDN (strona Mozilli zawierająca dokładne informacje o technologiach webowych). Przykładowo, <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math">strona JS&#39;owego obiektu Math</a>.</p>
 <h3 id="-a-id-third-party-javascript-href-third-party-javascript-a-biblioteki-os-b-trzecich"><a id="third-party-javascript" href="#third-party-javascript">#</a> Biblioteki osób trzecich</h3>
 <p>Jest wiele kodu JavaScript przeznaczonego do ponownego użytku, który <strong>nie jest wbudowany</strong>. Taki kod JavaScript osób trzecich zwykle jest nazywany „bibliotekami” (libraries) lub „wtyczkami” (plugins). Jedną z moich ulubionych jest <strong>Underscore.js</strong>. Zdobądźmy go i użyjmy na stronie! Na początek odwiedźmy <a href="http://underscorejs.org/">http://underscorejs.org/</a> i naciśnijmy odnośnik do pobrania (zwykle używam wersji rozwojowych, ponieważ są łatwiejsze w czytaniu i posiadają tą samą podstawową funkcjonalność). Następnie skopiuj kod biblioteki do schowka (możesz użyć opcji Zaznacz wszystko) Wklej go w konsolę i naciśnij enter. Przeglądarka ma teraz nową wartość: <code>_</code>. Underscore daje wiele przydatnych funkcji. Nauczysz się z nich korzystać później.</p>
-<p><img src="images/underscore.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/underscore.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <h3 id="-a-id-writing-functions-href-writing-functions-a-pisanie-w-asnych-funkcji"><a id="writing-functions" href="#writing-functions">#</a> Pisanie własnych funkcji</h3>
 <p>Nie jesteś ograniczony do korzystania z funkcji napisanych przez innych &mdash; możesz też utworzyć własną. Zróbmy to! Utwórzmy prostą funkcję <code>makeMoreExciting</code> , która doda kilka wykrzykników na koniec zdania, czyniąc zdanie dużo bardziej ekscytującym.</p>
 <pre><code>function makeMoreExciting(string) {
   return string + &#39;!!!!&#39;
 }
 </code></pre><p>Można to odczytać jako: „istnieje funkcja &#39;make more exciting&#39;, która pobiera ciąg znaków i zwraca jego kopię z dodatkowymi wykrzyknikami na końcu”. Tak napisalibyśmy to w konsoli, gdybyśmy nie użyli funkcji</p>
-<p><img src="images/custom-function-manually.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/custom-function-manually.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p>Wyrażenie <code>string + &#39;!!!!&#39;</code> zwraca nowy wiersz, a nasza zmienna o nazwie <code>string</code> nie zmienia swojego stanu.</p>
 <p>Wykorzystajmy naszą funkcją, zamiast robić to manualnie. Po pierwsze, wklej funkcję w konsolę i <strong>wywołaj</strong> ją <strong>przekazując</strong> argument w postaci ciągu znaków:</p>
-<p><img src="images/custom-function-call.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/custom-function-call.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p>Możesz też wywołać tą samą funkcję przekazując zmienną wskazującą na ciąg znaków (w powyższym przykładzie po prostu wprowadziliśmy zmienną, zamiast zapisywać ją do zmiennej):</p>
-<p><img src="images/custom-function-call-variable.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/custom-function-call-variable.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p>Wiersz <code>makeMoreExciting(sentence)</code> jest równoznaczny z poleceniem <code>sentence + &#39;!!!!&#39;</code>. Co, jeżeli chcemy <strong>zapisać</strong> (zaktualizować) wartość zdania? Zapiszmy zwracaną wartość do naszego zdania.</p>
 <pre><code>var sentence = &quot;time for a nap&quot;
 sentence = makeMoreExciting(sentence)
 </code></pre><p>Od teraz <code>sentence</code> posiada znak równości! Pamiętaj, że używasz słowa kluczowego <code>var</code> tylko podczas <strong>inicjalizacji</strong> zmiennej &mdash; przy jej pierwszym użyciu. Nie powinieneś później używać <code>var</code> jeżeli nie zamierzasz ponownie inicjalizować (wyczyścić) tej wartości.</p>
 <p>Co się stanie, jeżeli usuniemy instrukcję <code>return</code> z funkcji?</p>
-<p><img src="images/custom-function-no-return.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/custom-function-no-return.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p>Dlaczego zmienna <code>sentence</code> jest pusta? Funkcje domyślnie zwracają <code>undefined</code>! Możesz wybrać wartość zwracaną przez funkcję. Funkcje powinny pobierać wartość i zwracać ją. (ciekawostka: nazywają to mądrze <em>programowaniem funkcyjnym</em>). Następna funkcja, która nie zwraca żadnej wartości, ale używa innej metody, aby wyświetlić wynik:</p>
 <pre><code class="lang-js">function yellIt(string) {
   string = string.toUpperCase()
@@ -104,7 +131,10 @@ sentence = makeMoreExciting(sentence)
 </code></pre>
 <p>Funkcja <code>yellIt</code> korzysta z naszej funkcji <code>makeMoreExciting</code> oraz wbudowanej metody <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>. Metody to po prostu funkcje, które należą do czegoś &mdash; w tym przypadku do ciągu znaków (możemy nazywać ją zarówno metodą, jak i funkcją). <code>makeMoreExciting</code> nie należy do niczego, więc technicznie nie jest funkcją (może to być skomplikowane, wiem…).</p>
 <p>Ostatni wiersz funkcji po prostu wyświetla podaną wartość w konsoli.</p>
-<p><img src="images/custom-function-console-log.gif" alt="console"></p>
+<p><video width="632" height="196" controls loop>
+  <source src="images/custom-function-console-log.webm" type="video/webm">
+Twoja przeglądarka nie obsługuje tagu video.
+</video></p>
 <p>Jest więc coś nie tak z powyższą funkcją? To zależy! Istnieją dwa główne rodzaje funkcji:</p>
 <ul>
 <li>funkcje, które modyfikują lub tworzą wartości i zwracają je</li>
