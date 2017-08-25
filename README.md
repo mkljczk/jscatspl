@@ -4,7 +4,7 @@
 
 JavaScript jest językiem programowania, czyli innymi słowy językiem, którym instruujesz komputer, co ma robić. Tak, jak kontrolujesz człowieka używając syczenia i miauczenia, tak komputer jest kontrolowany z użyciem instrukcji w języku programowania. Wszystkie współczesne przeglądarki internetowe obsługują JavaScript, więc możesz wykorzystać jego możliwości do naprawdę szalonych rzeczy!
 
-JavaScript powstał, aby uczynić stroni internetowe bardziej interaktywnymi. Obecnie jest używany nie tylko w przeglądarkach, ale także na serwerach, smartfonach, a nawet robotach! Ta strona nauczy cię podstaw JavaScript bez zabierania zbędnego czasu*, więc szybciej zaczniesz działać.
+JavaScript powstał, aby uczynić strony internetowe bardziej interaktywnymi. Obecnie jest używany nie tylko w przeglądarkach, ale także na serwerach, smartfonach, a nawet robotach! Ta strona nauczy cię podstaw JavaScript bez zabierania zbędnego czasu*, więc szybciej zaczniesz działać.
 
 \* *W praktyce: trochę więcej. Zapewne godzinę lub dwie. Pamiętaj, że będąc kotem wolisz raczej leżeć w słońcu niż biegać…*
 
@@ -35,7 +35,7 @@ Nie musisz się obawiać! Najgorszą rzeczą, jaka może się stać będzie koni
 
 ## <a id="basics" href="#basics">#</a> Podstawy
 
-Na tej stronie działa JavaScript. Pobawmy się nim trochę. Dla uproszczenia zakładam, że korzystasz z Google Chrome (lub pochodnej, np. Opera, Chromium, Vivaldi…), jeżeli nie, będzie nam łatwiej, jeżeli będziesz korzystać z Chrome.
+Na tej stronie działa JavaScript. Pobawmy się nim trochę. Dla uproszczenia zakładam, że korzystasz z Google Chrome (lub pochodnej, np. Brave, Opera, Chromium, Vivaldi…), jeżeli nie, będzie nam łatwiej, jeżeli będziesz korzystać z Chrome.
 
 Na początek, naciśnij prawym przyciskiem na stronie i wybierz **Zbadaj element**, następnie przejdź do karty **Konsola**. Powinieneś zobaczyć coś takiego:
 
@@ -85,7 +85,7 @@ Możesz zastanawiać się, ile (i jakie) funkcji znajduje się jeszcze w JavaScr
 
 ### <a id="third-party-javascript" href="#third-party-javascript">#</a> Biblioteki osób trzecich
 
-Jest wiele kodu JavaScript przeznaczonego do ponownego użytku, który **nie jest wbudowany**. Taki kod JavaScript osób trzecich zwykle jest nazywany „bibliotekami” (libraries) lub „wtyczkami” (plugins). Jedną z moich ulubionych jest **Underscore.js**. Zdobądźmy go i użyjmy na stronie! Na początek odwiedźmy [http://underscorejs.org/](http://underscorejs.org/) i naciśnijmy odnośnik do pobrania (zwykle używam wersji rozwojowych, ponieważ są łatwiejsze w czytaniu i posiadają tą samą podstawową funkcjonalność). Następnie skopiuj kod biblioteki do schowka (możesz użyć opcji Zaznacz wszystko) Wklej go w konsolę i naciśnij enter. Przeglądarka ma teraz nową wartość: `_`. Underscore daje wiele przydatnych funkcji. Nauczysz się z nich korzystać później.
+Jest wiele kodu JavaScript przeznaczonego do ponownego użytku, który **nie jest wbudowany**. Taki kod JavaScript osób trzecich zwykle jest nazywany „bibliotekami” (libraries) lub „wtyczkami” (plugins). Jedną z moich ulubionych jest **Underscore.js**. Zdobądźmy go i użyjmy na stronie! Na początek odwiedźmy [http://underscorejs.org/](http://underscorejs.org/) i naciśnijmy odnośnik do pobrania (zwykle używam wersji rozwojowych, ponieważ są łatwiejsze w czytaniu i posiadają tą samą podstawową funkcjonalność). Następnie skopiuj kod biblioteki do schowka (możesz użyć opcji Zaznacz wszystko). Wklej go w konsolę i naciśnij enter. Przeglądarka ma teraz nową wartość: `_`. Underscore daje wiele przydatnych funkcji. Nauczysz się z nich korzystać później.
 
 ![console](images/underscore.gif)
 
@@ -404,7 +404,7 @@ Chcesz, aby poruszono tu inny temat? Zgłoś na [stronie oryginalnego projektu](
 
 ### <a id="recommended-reading" href="#recommended-reading">#</a> Do przeczytania
 
-  JavaScript dla kotów limina wiele szczegółów, które nie są ważne na początek (koty nie są tym aż tak zainteresowane), ale jeśli chcesz zagłębić się w to, sprawdź te pozycje:
+  JavaScript dla kotów pomija wiele szczegółów, które nie są ważne na początek (koty nie są tym aż tak zainteresowane), ale jeśli chcesz zagłębić się w to, sprawdź te pozycje:
   
   - [NodeSchool.io](http://nodeschool.io/) jest rozwijanym przez społeczność, otwartoźródłowym oprogramowaniem edukacyjnym, które uczy różnych umiejętności wymaganych przy tworzeniu stron internetowych. Pomagałem przy tworzeniu NodeSchool! Szkoda, że nie ma tam aż tylu kotów…
   - [Eloquent Javascript](http://eloquentjavascript.net/) jest bezpłatną książką do nauki JavaScript. Jest bardzo dobra! Szczególnie rozdział o [wartościach, zmiennych i przepływach danych](http://eloquentjavascript.net/chapter2.html)
