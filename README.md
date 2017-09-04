@@ -366,7 +366,7 @@ Przykład nieblokującego kodu:
 a(b)
 ```
 
-W nieblokującej wersji,  `b` wywołuje `a`. W blokującej wersji, zarówno `a` jak i `b` są wywoływane (obie mają `()` po sobie). W nieblokującej wersji, zauważysz że tylko In the non-blocking version you will notice that only `a` zostanie wywołane, a `b` zostanie przekazane jako argument.
+W nieblokującej wersji,  `b` wywołuje `a`. W blokującej wersji, zarówno `a` jak i `b` są wywoływane (obie mają `()` po sobie). W nieblokującej wersji, zauważysz że tylko `a` zostanie wywołane, a `b` zostanie przekazane jako argument.
 
 W blokującej wersji, nie ma bezpośredniej relacji pomiędzy `a` i `b`. W nieblokującej wersji, do `a` należy to, co ma robić, po czym wywoła `b`. Jest to nazywane wywołaniach zwrotnymi, ponieważ nasza funkcja zwrotna, w tym przypadku `b`, zostanie wywołana po wykonaniu `a`.
 
