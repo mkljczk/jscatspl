@@ -241,7 +241,7 @@ var favorites = {
   napSpots: [&quot;sofa&quot;, &quot;skrzynka&quot;, &quot;ludzka twarz&quot;]
 }
 </code></pre>
-<p>Kiedy łączysz różne rodzaje kontenerów, tworzysz <strong>struktury danych</strong>, jak lego!</p>
+<p>Kiedy łączysz różne rodzaje kontenerów, tworzysz <strong>struktury danych</strong>, jak z klocków lego!</p>
 <h3 id="-a-id-callbacks-href-callbacks-a-wywo-ania-zwrotne"><a id="callbacks" href="#callbacks">#</a> Wywołania zwrotne</h3>
 <p>Wywołania zwrotne nie są w rzeczywistości możliwością JavaScript, tak jak obiekty czy tablice, są natomiast jednym ze sposobów na używanie funkcji. Aby zrozumieć, dlaczego odwołania są przydatne, musisz najpierw rozumieć programowanie asynchroniczne (często skracane do <strong>async</strong>). Asynchroniczny kod z definicji jest kodem pisanym w niesynchroniczny sposób. Kod synchroniczny jest prosty do zrozumienia i napisania. Przykład:</p>
 <pre><code class="lang-js">var photo = download(&#39;http://foo-chan.com/images/sp.jpg&#39;)
@@ -270,7 +270,7 @@ uploadPhotoTweet(photo, &#39;@maxogden&#39;)
 
 measureLoopSpeed()
 </code></pre>
-<p>Wklej ten mod do swojej konsoli JavaScript, a po sekundzie otrzymasz wypisaną liczbę. Na moim komputerze jest to <code>8527360</code>, czyli około <strong>8,5 miliona</strong>. W ciągu jednej sekundy JavaScript może wywołać funkcję <code>addOne</code> 8,5 miliona razy! Więc, pobierając zdjęcie kodem synchronicznym, potencjalnie zatrzymuje wykonywanie aż 8,5 miliona operacji!</p>
+<p>Wklej ten kod do swojej konsoli JavaScript, a po sekundzie otrzymasz wypisaną liczbę. Na moim komputerze jest to <code>8527360</code>, czyli około <strong>8,5 miliona</strong>. W ciągu jednej sekundy JavaScript może wywołać funkcję <code>addOne</code> 8,5 miliona razy! Więc, pobierając zdjęcie kodem synchronicznym, potencjalnie zatrzymuje wykonywanie aż 8,5 miliona operacji!</p>
 <p>Niektóre języki posiadają funkcję <code>sleep</code>, która blokuje wykonywanie kodu na kilka sekund. Dla przykładu, kod <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29"><code>bash</code></a>a uruchomiony na dystrybucji GNU/Linuxa używający polecenia <code>sleep</code>. Po wykonaniu <code>sleep 3 &amp;&amp; echo &#39;koniec snu&#39;</code>, po 3 sekundach zostanie wyświetlony tekst <code>koniec snu</code>.</p>
 <p><img src="images/bash-sleep.png" alt="console"></p>
 <p>JavaScript nie posiada tej funkcji. Zapewne, jako kot zapytasz mnie: „Dlaczego uczę się języka, który nie uwzględnia snu?”. Posłuchaj. Zamiast polegać na <code>sleep</code>, JS zachęca do używania funkcji. Jeżeli chcesz poczekać na ukończenie zadania A, zanim wykonasz B, wstawiasz kod zadania B do funkcji, którą wywołasz, gdy A zostanie wykonane.</p>

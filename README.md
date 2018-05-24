@@ -304,7 +304,7 @@ var favorites = {
 }
 ```
 
-Kiedy łączysz różne rodzaje kontenerów, tworzysz **struktury danych**, jak lego!
+Kiedy łączysz różne rodzaje kontenerów, tworzysz **struktury danych**, jak z klocków lego!
 
 ### <a id="callbacks" href="#callbacks">#</a> Wywołania zwrotne
 
@@ -345,7 +345,7 @@ function measureLoopSpeed() {
 measureLoopSpeed()
 ```
 
-Wklej ten mod do swojej konsoli JavaScript, a po sekundzie otrzymasz wypisaną liczbę. Na moim komputerze jest to `8527360`, czyli około **8,5 miliona**. W ciągu jednej sekundy JavaScript może wywołać funkcję `addOne` 8,5 miliona razy! Więc, pobierając zdjęcie kodem synchronicznym, potencjalnie zatrzymuje wykonywanie aż 8,5 miliona operacji!
+Wklej ten kod do swojej konsoli JavaScript, a po sekundzie otrzymasz wypisaną liczbę. Na moim komputerze jest to `8527360`, czyli około **8,5 miliona**. W ciągu jednej sekundy JavaScript może wywołać funkcję `addOne` 8,5 miliona razy! Więc, pobierając zdjęcie kodem synchronicznym, potencjalnie zatrzymuje wykonywanie aż 8,5 miliona operacji!
 
 Niektóre języki posiadają funkcję `sleep`, która blokuje wykonywanie kodu na kilka sekund. Dla przykładu, kod [`bash`](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)a uruchomiony na dystrybucji GNU/Linuxa używający polecenia `sleep`. Po wykonaniu `sleep 3 && echo 'koniec snu'`, po 3 sekundach zostanie wyświetlony tekst `koniec snu`.
 
