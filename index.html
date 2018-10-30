@@ -275,11 +275,11 @@ measureLoopSpeed()
 <p><img src="images/bash-sleep.png" alt="console"></p>
 <p>JavaScript nie posiada tej funkcji. Zapewne, jako kot zapytasz mnie: „Dlaczego uczę się języka, który nie uwzględnia snu?”. Posłuchaj. Zamiast polegać na <code>sleep</code>, JS zachęca do używania funkcji. Jeżeli chcesz poczekać na ukończenie zadania A, zanim wykonasz B, wstawiasz kod zadania B do funkcji, którą wywołasz, gdy A zostanie wykonane.</p>
 <p>Przykład blokującego kodu:</p>
-<pre><code class="lang-js">a()
-b()
+<pre><code class="lang-js">a();
+b();
 </code></pre>
 <p>Przykład nieblokującego kodu:</p>
-<pre><code class="lang-js">a(b)
+<pre><code class="lang-js">a(b);
 </code></pre>
 <p>W nieblokującej wersji,  <code>b</code> wywołuje <code>a</code>. W blokującej wersji, zarówno <code>a</code> jak i <code>b</code> są wywoływane (obie mają <code>()</code> po sobie). W nieblokującej wersji, zauważysz że tylko In the non-blocking version you will notice that only <code>a</code> zostanie wywołane, a <code>b</code> zostanie przekazane jako argument.</p>
 <p>W blokującej wersji, nie ma bezpośredniej relacji pomiędzy <code>a</code> i <code>b</code>. W nieblokującej wersji, do <code>a</code> należy to, co ma robić, po czym wywoła <code>b</code>. Jest to nazywane wywołaniach zwrotnymi, ponieważ nasza funkcja zwrotna, w tym przypadku <code>b</code>, zostanie wywołana po wykonaniu <code>a</code>.</p>
@@ -287,7 +287,7 @@ b()
 <pre><code class="lang-js">function a(done) {
   download(&#39;https://pbs.twimg.com/media/B4DDWBrCEAA8u4O.jpg:large&#39;, function doneDownloading(error, png) {
     // obsługa błędów, jeżeli takie się wydarzą
-    if (err) console.log(&#39;kruci hegot, niedoróba!&#39;, error)
+    if (error) console.log(&#39;kruci hegot, niedoróba!&#39;, error);
 
     // wywołaj, jeśli wszystko się wykonało
     done()

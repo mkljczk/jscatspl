@@ -356,14 +356,14 @@ JavaScript nie posiada tej funkcji. Zapewne, jako kot zapytasz mnie: „Dlaczego
 Przykład blokującego kodu:
 
 ```js
-a()
-b()
+a();
+b();
 ```
 
 Przykład nieblokującego kodu:
 
 ```js
-a(b)
+a(b);
 ```
 
 W nieblokującej wersji,  `b` wywołuje `a`. W blokującej wersji, zarówno `a` jak i `b` są wywoływane (obie mają `()` po sobie). W nieblokującej wersji, zauważysz że tylko `a` zostanie wywołane, a `b` zostanie przekazane jako argument.
@@ -376,7 +376,7 @@ Implementacja w pseudokodzie, jak może wyglądać funkcja `a`:
 function a(done) {
   download('https://pbs.twimg.com/media/B4DDWBrCEAA8u4O.jpg:large', function doneDownloading(error, png) {
     // obsługa błędów, jeżeli takie się wydarzą
-    if (err) console.log('kruci hegot, niedoróba!', error)
+    if (error) console.log('kruci hegot, niedoróba!', error);
     
     // wywołaj, jeśli wszystko się wykonało
     done()
