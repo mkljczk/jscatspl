@@ -53,7 +53,7 @@ Będąc kotem, chcesz zastąpić wszystkie wystąpienia słowa „psy” w Inter
 
 ![console](images/console-strings.gif)
 
-Widzisz tą okropną wiadomość o błędzie? Nie martw się – nie zrobiłeś nic nielegalnego. SyntaxError ILLEGAL jest jedynie komunikatem oznaczającym błąd w programie. Pierwsze dwa zdania miały pasujące znaki cudzysłowiu, ale łącząc oba, napotkał mnie błąd.
+Widzisz tę okropną wiadomość o błędzie? Nie martw się – nie zrobiłeś nic nielegalnego. SyntaxError ILLEGAL jest jedynie komunikatem oznaczającym błąd w programie. Pierwsze dwa zdania miały pasujące znaki cudzysłowiu, ale łącząc oba, napotkał mnie błąd.
 
 Dobrze, aby naprawić te zdania (zastępując „psy” naszą poprawioną wersją), musimy zapisać oryginalne zdania, aby wywołać je później w trakcie magicznego zastępowania. Zauważyłeś, że ciąg znaków jest powtarzany, kiedy wprowadzisz go w konsolę? To dlatego, że nie kazaliśmy zapisać komputerowi tego zdania, więc powraca ono do nas (lub pojawia się komunikat o błędzie, jeżeli zrobiliśmy coś nie tak).
 
@@ -85,7 +85,7 @@ Możesz zastanawiać się, ile (i jakie) funkcji znajduje się jeszcze w JavaScr
 
 ### <a id="third-party-javascript" href="#third-party-javascript">#</a> Biblioteki osób trzecich
 
-Jest wiele kodu JavaScript przeznaczonego do ponownego użytku, który **nie jest wbudowany**. Taki kod JavaScript osób trzecich zwykle jest nazywany „bibliotekami” (libraries) lub „wtyczkami” (plugins). Jedną z moich ulubionych jest **Underscore.js**. Zdobądźmy go i użyjmy na stronie! Na początek odwiedźmy [http://underscorejs.org/](http://underscorejs.org/) i naciśnijmy odnośnik do pobrania (zwykle używam wersji rozwojowych, ponieważ są łatwiejsze w czytaniu i posiadają tą samą podstawową funkcjonalność). Następnie skopiuj kod biblioteki do schowka (możesz użyć opcji Zaznacz wszystko). Wklej go w konsolę i naciśnij enter. Przeglądarka ma teraz nową wartość: `_`. Underscore daje wiele przydatnych funkcji. Nauczysz się z nich korzystać później.
+Jest wiele kodu JavaScript przeznaczonego do ponownego użytku, który **nie jest wbudowany**. Taki kod JavaScript osób trzecich zwykle jest nazywany „bibliotekami” (libraries) lub „wtyczkami” (plugins). Jedną z moich ulubionych jest **Underscore.js**. Zdobądźmy go i użyjmy na stronie! Na początek odwiedźmy [http://underscorejs.org/](http://underscorejs.org/) i naciśnijmy odnośnik do pobrania (zwykle używam wersji rozwojowych, ponieważ są łatwiejsze w czytaniu i posiadają tę samą podstawową funkcjonalność). Następnie skopiuj kod biblioteki do schowka (możesz użyć opcji Zaznacz wszystko). Wklej go w konsolę i naciśnij enter. Przeglądarka ma teraz nową wartość: `_`. Underscore daje wiele przydatnych funkcji. Nauczysz się z nich korzystać później.
 
 ![console](images/underscore.gif)
 
@@ -94,7 +94,7 @@ Jest wiele kodu JavaScript przeznaczonego do ponownego użytku, który **nie jes
 Nie jesteś ograniczony do korzystania z funkcji napisanych przez innych &mdash; możesz też utworzyć własną. Zróbmy to! Utwórzmy prostą funkcję `makeMoreExciting` , która doda kilka wykrzykników na koniec zdania, czyniąc zdanie dużo bardziej ekscytującym.
 
     function makeMoreExciting(string) {
-      return string + '!!!!'
+      return string + '!!!!';
     }
 
 Można to odczytać jako: „istnieje funkcja 'make more exciting', która pobiera ciąg znaków i zwraca jego kopię z dodatkowymi wykrzyknikami na końcu”. Tak napisalibyśmy to w konsoli, gdybyśmy nie użyli funkcji
@@ -107,14 +107,14 @@ Wykorzystajmy naszą funkcją, zamiast robić to manualnie. Po pierwsze, wklej f
 
 ![console](images/custom-function-call.gif)
 
-Możesz też wywołać tą samą funkcję przekazując zmienną wskazującą na ciąg znaków (w powyższym przykładzie po prostu wprowadziliśmy zmienną, zamiast zapisywać ją do zmiennej):
+Możesz też wywołać tę samą funkcję przekazując zmienną wskazującą na ciąg znaków (w powyższym przykładzie po prostu wprowadziliśmy zmienną, zamiast zapisywać ją do zmiennej):
 
 ![console](images/custom-function-call-variable.gif)
 
 Wiersz `makeMoreExciting(sentence)` jest równoznaczny z poleceniem `sentence + '!!!!'`. Co, jeżeli chcemy **zapisać** (zaktualizować) wartość zdania? Zapiszmy zwracaną wartość do naszego zdania.
 
-    var sentence = "time for a nap"
-    sentence = makeMoreExciting(sentence)
+    var sentence = "time for a nap";
+    sentence = makeMoreExciting(sentence);
 
 Od teraz `sentence` posiada znak równości! Pamiętaj, że używasz słowa kluczowego `var` tylko podczas **inicjalizacji** zmiennej &mdash; przy jej pierwszym użyciu. Nie powinieneś później używać `var` jeżeli nie zamierzasz ponownie inicjalizować (wyczyścić) tej wartości.
 
@@ -126,9 +126,9 @@ Dlaczego zmienna `sentence` jest pusta? Funkcje domyślnie zwracają `undefined`
 
 ```js
 function yellIt(string) {
-  string = string.toUpperCase()
-  string = makeMoreExciting(string)
-  console.log(string)
+  string = string.toUpperCase();
+  string = makeMoreExciting(string);
+  console.log(string);
 }
 ```
 
@@ -147,11 +147,11 @@ Jest więc coś nie tak z powyższą funkcją? To zależy! Istnieją dwa główn
 
 ```js
 function yellIt(string) {
-  string = string.toUpperCase()
-  return makeMoreExciting(string)
+  string = string.toUpperCase();
+  return makeMoreExciting(string);
 }
 
-console.log(yellIt("nie boję się ludzi"))
+console.log(yellIt("nie boję się ludzi"));
 ```
 
 W ten sposób `yellIt` staje się bardziej **ogólne**, co oznacza że funkcja spełnia wyłącznie swoje zadanie, nie wyświetlając wyniku &mdash; ta możliwość może zostać dodana później, poza deklaracją funkcji.
@@ -164,9 +164,9 @@ Pętle (*loops*) są jednym z najważniejszych sposobów na opanowanie możliwo�
   
 ```js
 function logANumber(someNumber) {
-  console.log(someNumber)
+  console.log(someNumber);
 }
-_.times(10, logANumber)
+_.times(10, logANumber);
 ```
 
 Ten kod używa metody Underscore o nazwie [times](http://underscorejs.org/#times), która pobiera jedną liczbę i funkcję, która wyświetla, ile razy wykorzystano funkcję.
@@ -176,16 +176,16 @@ Ten kod używa metody Underscore o nazwie [times](http://underscorejs.org/#times
 Chcąc napisać to ręcznie, wyglądałoby to tak:
 
 ```js
-logANumber(0)
-logANumber(1)
-logANumber(2)
-logANumber(3)
-logANumber(4)
-logANumber(5)
-logANumber(6)
-logANumber(7)
-logANumber(8)
-logANumber(9)
+logANumber(0);
+logANumber(1);
+logANumber(2);
+logANumber(3);
+logANumber(4);
+logANumber(5);
+logANumber(6);
+logANumber(7);
+logANumber(8);
+logANumber(9);
 ```
 
 Ale koty nigdy nie wykonują niepotrzebnej pracy, więc musisz pytać siebie, *„czy używam najbardziej leniwej metody, aby to wykonać?”*.
@@ -193,7 +193,7 @@ Ale koty nigdy nie wykonują niepotrzebnej pracy, więc musisz pytać siebie, *�
 Dlaczego jest to nazywane zapętlaniem? Pomyśl to tak. Jeżeli chcielibyśmy wypisać 10 cyfr (od 0 do 9) używając tablicy w JavaScript, wyglądałoby to tak:
 
 ```js
-var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 ```
 
 Metoda `times` w rzeczywistości tworzy taką tablicę i dla każdej liczby wykonuje zadanie: w tym przypadku wywołuje funkcję `logANumber` z obecną liczbą.
@@ -205,7 +205,7 @@ Wspomniałem o nich już kilka razy, ale poświęćmy minutę, aby się ich nauc
 Jak utworzyć tablicę:
 
 ```js
-var myCatFriends = ["bill", "tabby", "ceiling"]
+var myCatFriends = ["bill", "tabby", "ceiling"];
 ```
 
 Teraz masz listę swoich kocich przyjaciół!
@@ -215,27 +215,27 @@ Elementy tablicy są przypisywane od numeru 0 w górę. Więc `myCatFriends[0]` 
 Aby uzyskać imiona przyjaciół z naszej nowej tablicy, możesz uzyskać dostęp bezpośrednio, np.:
 
 ```js
-console.log(myCatFriends[0])
+console.log(myCatFriends[0]);
 ```
 
 ![console](images/array-access.png)
 
-Jeżeli byłeś w najmodniejszym klubie kota i zdobyłeś nowego przyjaciela ostatniej nocy, aby łatwo go dodać do tablicy, wprowadź: `myCatFriends.push("super hip cat")`.
+Jeżeli byłeś w najmodniejszym klubie kota i zdobyłeś nowego przyjaciela ostatniej nocy, aby łatwo go dodać do tablicy, wprowadź: `myCatFriends.push("super hip cat");`.
 
 Aby sprawdzić, czy nowy kot został dodany do tablicy, użyj `.length`:
 
 ![console](images/array-push-length.png)
 
-Zauważyłeś, że `push` zwróciło długość? Wygodnie! Pamiętaj też, że  i tablice zawsze **zachowują kolejność**, co oznacza, że pamiętają kolejność, w której dodano lub zdefiniowano elementy. Nie wszystko w JavaScript tak działa, więc zapamiętaj tą specyfikę tablic.
+Zauważyłeś, że `push` zwróciło długość? Wygodnie! Pamiętaj też, że  i tablice zawsze **zachowują kolejność**, co oznacza, że pamiętają kolejność, w której dodano lub zdefiniowano elementy. Nie wszystko w JavaScript tak działa, więc zapamiętaj tę specyfikę tablic.
   
 ### <a id="objects" href="#objects">#</a> Obiekty
 
 Tablice są dobre dla list, ale może być ciężko używać ich do innych działań. Wyobraź sobie tablicę kocich przyjaciół. Co, jeżeli chciałbyś przechować więcej, niż tylko imiona?
 
 ```js
-var myCatFriends = ["bill", "tabby", "ceiling"]
-var lastNames = ["the cat", "cat", "cat"]
-var addresses = ["The Alley", "Grandmas House", "Attic"]
+var myCatFriends = ["bill", "tabby", "ceiling"];
+var lastNames = ["the cat", "cat", "cat"];
+var addresses = ["The Alley", "Grandmas House", "Attic"];
 ```
 
 Czasem dobrze jest trzymać wszystkie adresy i imiona w jednej wartości. Ale czasem masz „kota w mózgu”, więc chcesz przywołać Billa i sprawdzić jego adres. Z tablicami zajmuje to dużo pracy, ponieważ nie możesz powiedzieć „tablico, daj mi adres Bill” ponieważ Bill jest w jednej tablicy, a jego adres w zupełnie innej.
@@ -245,9 +245,9 @@ Czasem dobrze jest trzymać wszystkie adresy i imiona w jednej wartości. Ale cz
 Może to być nierozsądne, ponieważ jeżeli zmieni się zawartość tablicy i dodamy nowego kota na początek, powinniśmy zaktualizować też zmienną `billsPosition`, aby zawierała obecny adres Billa. Istnieje prostszy sposób na zarządzanie takimi danymi, wykorzystując obiekty:
 
 ```js
-var firstCat = { name: "bill", lastName: "the cat", address: "The Alley" }
-var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
-var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
+var firstCat = { name: "bill", lastName: "the cat", address: "The Alley" };
+var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" };
+var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" };
 ```
  
 Dlaczego robimy to w ten sposób? Ponieważ teraz mamy zmienną dla każdego kota, której możemy użyć do przechowywania danych w wygodniejszy i czytelniejszy sposób.
@@ -258,25 +258,25 @@ Możesz myśleć o obiektach jak o kluczach na breloku. Każdy jest przeznaczony
 
 ```js
 // obiekt z kluczem 'name' i jedną wartością 'bill'
-{ name: 'bill' }
+{ name: 'bill' };
 ```
 
 Dlaczego miałbyś więc używać tablic, kiedy możesz użyć obiektów? Niestety, obiekty nie zapamiętują kolejności wprowadzonych danych. Możesz zdefiniować obiekt tak:
 
 ```js
-{ date: "10/20/2012", diary: "spałem dziś trochę", name: "Charles" }
+{ date: "10/20/2012", diary: "spałem dziś trochę", name: "Charles" };
 ```
 
 Ale komputer może go wyświetlić tak:
 
 ```js
-{ diary: "spałem dziś trochę", name: "Charles", date: "10/20/2012" }
+{ diary: "spałem dziś trochę", name: "Charles", date: "10/20/2012" };
 ```
 
 Albo tak!
 
 ```js
-{ name: "Charles", diary: "spałem dziś trochę", date: "10/20/2012" }
+{ name: "Charles", diary: "spałem dziś trochę", date: "10/20/2012" };
 ```
 
 Nie powinieneś więc ufać kolejności kluczy w obiektach. Jeżeli chcesz zrobić to naprawdę dobrze, możesz utworzyć tablicę wypełnioną obiektami, lub obiekt zawierający tablice!
@@ -295,13 +295,13 @@ var moodLog = [
     date: "10/22/2012",
     mood: "mruczący"
   }
-]
+];
 
 // segregowane od najmniej do najbardziej ulubionych
 var favorites = {
   treats: ["obserwacja ptaków", "pocieranie brzucha", "kocimiętka"],
   napSpots: ["sofa", "skrzynka", "ludzka twarz"]
-}
+};
 ```
 
 Kiedy łączysz różne rodzaje kontenerów, tworzysz **struktury danych**, jak z klocków lego!
@@ -311,11 +311,11 @@ Kiedy łączysz różne rodzaje kontenerów, tworzysz **struktury danych**, jak 
 Wywołania nie są w rzeczywistości możliwością JavaScript, tak jak obiekty czy tablice, są natomiast jednym ze sposobów na używanie funkcji. Aby zrozumieć, dlaczego odwołania są przydatne, musisz najpierw rozumieć programowanie asynchroniczne (często skracane do **async**). Asynchroniczny kod z definicji jest kodem pisanym w niesynchroniczny sposób. Kod synchroniczny jest prosty do zrozumienia i napisania. Przykład:
 
 ```js
-var photo = download('http://foo-chan.com/images/sp.jpg')
-uploadPhotoTweet(photo, '@maxogden')
+var photo = download('http://foo-chan.com/images/sp.jpg');
+uploadPhotoTweet(photo, '@maxogden');
 ```
 
-Ten synchroniczny [pseudokod](http://pl.wikipedia.org/wiki/Pseudokod) pobiera zdjęcie słodkiego kotka, wysyła je na Twitterze i twittuje do `@maxogden`. Proste i zrozumiałe!
+Ten synchroniczny [pseudokod](http://pl.wikipedia.org/wiki/Pseudokod) pobiera zdjęcie słodkiego kotka, wysyła je na Twitterze i tweettuje do `@maxogden`. Proste i zrozumiałe!
 
 (*Od autora: Ja, @maxogden z radością przyjmę każde zdjęcie kota na Twitterze*)
 
@@ -327,22 +327,22 @@ Blokowanie wykonywania powinno być unikane za wszelką cenę, szczególnie gdy 
 
 ```js
 function measureLoopSpeed() {
-  var count = 0
-  function addOne() { count = count + 1 }
+  var count = 0;
+  function addOne() { count = count + 1 };
 
   // Date.now() zwraca ogromną liczbę wyrażoną w milisekundach,
   // które minęły od 1 stycznia 1970
-  var now = Date.now()
+  var now = Date.now();
 
   // Zapętl tak długo, jak Date.now() nie będzie o 1000 milisekund (1 sekunda) lub
   // więcej od początku pętli. Za każdym razem użyj addOne()
-  while (Date.now() - now < 1000) addOne()
+  while (Date.now() - now < 1000) addOne();
   
   // Kiedy będzie to >= 1000ms, wypiszmy liczbę wykonanych zadań
-  console.log(count)
+  console.log(count);
 }
 
-measureLoopSpeed()
+measureLoopSpeed();
 ```
 
 Wklej ten kod do swojej konsoli JavaScript, a po sekundzie otrzymasz wypisaną liczbę. Na moim komputerze jest to `8527360`, czyli około **8,5 miliona**. W ciągu jednej sekundy JavaScript może wywołać funkcję `addOne` 8,5 miliona razy! Więc, pobierając zdjęcie kodem synchronicznym, potencjalnie zatrzymuje wykonywanie aż 8,5 miliona operacji!
@@ -379,7 +379,7 @@ function a(done) {
     if (error) console.log('kruci hegot, niedoróba!', error);
     
     // wywołaj, jeśli wszystko się wykonało
-    done()
+    done();
   })
 }
 ```

@@ -12,6 +12,15 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <meta property="og:url" content="http://jsforcats.m4sk.in">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JavaScript dla kotów">
+    <meta property="og:description" content="Wprowadzenie dla początkujących programistów dedykowane kotom.">
+    <meta property="og:image" content="images/substack-cats.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
   </head>
 <body>
 <div id="container">
@@ -65,10 +74,10 @@ Twoja przeglądarka nie obsługuje tagu video.
   <source src="images/console-strings.webm" type="video/webm">
 Twoja przeglądarka nie obsługuje tagu video.
 </video></p>
-<p>Widzisz tą okropną wiadomość o błędzie? Nie martw się – nie zrobiłeś nic nielegalnego. SyntaxError ILLEGAL jest jedynie komunikatem oznaczającym błąd w programie. Pierwsze dwa zdania miały pasujące znaki cudzysłowiu, ale łącząc oba, napotkał mnie błąd.</p>
+<p>Widzisz tę okropną wiadomość o błędzie? Nie martw się – nie zrobiłeś nic nielegalnego. SyntaxError ILLEGAL jest jedynie komunikatem oznaczającym błąd w programie. Pierwsze dwa zdania miały pasujące znaki cudzysłowiu, ale łącząc oba, napotkał mnie błąd.</p>
 <p>Dobrze, aby naprawić te zdania (zastępując „psy” naszą poprawioną wersją), musimy zapisać oryginalne zdania, aby wywołać je później w trakcie magicznego zastępowania. Zauważyłeś, że ciąg znaków jest powtarzany, kiedy wprowadzisz go w konsolę? To dlatego, że nie kazaliśmy zapisać komputerowi tego zdania, więc powraca ono do nas (lub pojawia się komunikat o błędzie, jeżeli zrobiliśmy coś nie tak).</p>
 <h3 id="-a-id-values-href-values-a-warto-ci-i-zmienne"><a id="values" href="#values">#</a> Wartości i zmienne</h3>
-<p><strong>Wartości</strong> (z ang. <em>values</em>) są najprostszymi komponentami w JavaScript. <code>1</code> jest wartością, <code>true</code> jest wartością, <code>&quot;hello&quot;</code> jest wartością, <code>function() {}</code> jest wartością, a lista jest jeszcze dłuższa! Jest wiele różnych <strong>typów</strong> wartości w JavaScript, ale nie musisz ich jeszcze znać &mdash; poznasz je w trakcie dalszej nauki, w miarę potrzeb.</p>
+<p><strong>Wartości</strong> (z ang. <em>values</em>) są najprostszymi komponentami w JavaScript. <code>1</code> jest wartością, <code>true</code> jest wartością, <code>&#39;hello&#39;</code> jest wartością, <code>function() {}</code> jest wartością, a lista jest jeszcze dłuższa! Jest wiele różnych <strong>typów</strong> wartości w JavaScript, ale nie musisz ich jeszcze znać &mdash; poznasz je w trakcie dalszej nauki, w miarę potrzeb.</p>
 <p>Do przechowywania wartości używamy <strong>zmiennych</strong> (po ang. <em>variable</em>). Zmienna może przechowywać różne typy wartości, które mogą być zmieniane wielokrotnie. To tak jak skrzynki pocztowe. Przechowujemy coś w zmiennej, np. zdanie i przekazujemy zmiennej adres, którego możemy użyć później. W rzeczywistości skrzynki pocztowe posiadają swój numer, ale w JavaScript może to być dowolny ciąg małych liter i cyfr, bez spacji.</p>
 <p><video width="632" height="196" controls loop>
   <source src="images/console-variables.webm" type="video/webm">
@@ -95,7 +104,7 @@ Twoja przeglądarka nie obsługuje tagu video.
 <h3 id="-a-id-writing-functions-href-writing-functions-a-pisanie-w-asnych-funkcji"><a id="writing-functions" href="#writing-functions">#</a> Pisanie własnych funkcji</h3>
 <p>Nie jesteś ograniczony do korzystania z funkcji napisanych przez innych &mdash; możesz też utworzyć własną. Zróbmy to! Utwórzmy prostą funkcję <code>makeMoreExciting</code> , która doda kilka wykrzykników na koniec zdania, czyniąc zdanie dużo bardziej ekscytującym.</p>
 <pre><code>function makeMoreExciting(string) {
-  return string + &#39;!!!!&#39;
+  return string + &#39;!!!!&#39;;
 }
 </code></pre><p>Można to odczytać jako: „istnieje funkcja &#39;make more exciting&#39;, która pobiera ciąg znaków i zwraca jego kopię z dodatkowymi wykrzyknikami na końcu”. Tak napisalibyśmy to w konsoli, gdybyśmy nie użyli funkcji</p>
 <p><video width="632" height="196" controls loop>
@@ -108,14 +117,14 @@ Twoja przeglądarka nie obsługuje tagu video.
   <source src="images/custom-function-call.webm" type="video/webm">
 Twoja przeglądarka nie obsługuje tagu video.
 </video></p>
-<p>Możesz też wywołać tą samą funkcję przekazując zmienną wskazującą na ciąg znaków (w powyższym przykładzie po prostu wprowadziliśmy zmienną, zamiast zapisywać ją do zmiennej):</p>
+<p>Możesz też wywołać tę samą funkcję przekazując zmienną wskazującą na ciąg znaków (w powyższym przykładzie po prostu wprowadziliśmy zmienną, zamiast zapisywać ją do zmiennej):</p>
 <p><video width="632" height="196" controls loop>
   <source src="images/custom-function-call-variable.webm" type="video/webm">
 Twoja przeglądarka nie obsługuje tagu video.
 </video></p>
 <p>Wiersz <code>makeMoreExciting(sentence)</code> jest równoznaczny z poleceniem <code>sentence + &#39;!!!!&#39;</code>. Co, jeżeli chcemy <strong>zapisać</strong> (zaktualizować) wartość zdania? Zapiszmy zwracaną wartość do naszego zdania.</p>
-<pre><code>var sentence = &quot;time for a nap&quot;
-sentence = makeMoreExciting(sentence)
+<pre><code>var sentence = &quot;time for a nap&quot;;
+sentence = makeMoreExciting(sentence);
 </code></pre><p>Od teraz <code>sentence</code> posiada znak równości! Pamiętaj, że używasz słowa kluczowego <code>var</code> tylko podczas <strong>inicjalizacji</strong> zmiennej &mdash; przy jej pierwszym użyciu. Nie powinieneś później używać <code>var</code> jeżeli nie zamierzasz ponownie inicjalizować (wyczyścić) tej wartości.</p>
 <p>Co się stanie, jeżeli usuniemy instrukcję <code>return</code> z funkcji?</p>
 <p><video width="632" height="196" controls loop>
@@ -124,9 +133,9 @@ Twoja przeglądarka nie obsługuje tagu video.
 </video></p>
 <p>Dlaczego zmienna <code>sentence</code> jest pusta? Funkcje domyślnie zwracają <code>undefined</code>! Możesz wybrać wartość zwracaną przez funkcję. Funkcje powinny pobierać wartość i zwracać ją. (ciekawostka: nazywają to mądrze <em>programowaniem funkcyjnym</em>). Następna funkcja, która nie zwraca żadnej wartości, ale używa innej metody, aby wyświetlić wynik:</p>
 <pre><code class="lang-js">function yellIt(string) {
-  string = string.toUpperCase()
-  string = makeMoreExciting(string)
-  console.log(string)
+  string = string.toUpperCase();
+  string = makeMoreExciting(string);
+  console.log(string);
 }
 </code></pre>
 <p>Funkcja <code>yellIt</code> korzysta z naszej funkcji <code>makeMoreExciting</code> oraz wbudowanej metody <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>. Metody to po prostu funkcje, które należą do czegoś &mdash; w tym przypadku do ciągu znaków (możemy nazywać ją zarówno metodą, jak i funkcją). <code>makeMoreExciting</code> nie należy do niczego, więc technicznie nie jest funkcją (może to być skomplikowane, wiem…).</p>
@@ -142,82 +151,82 @@ Twoja przeglądarka nie obsługuje tagu video.
 </ul>
 <p><code>console.log</code> jest przykładem drugiego rodzaji funkcji: wyświetla tekst w konsoli &mdash; możesz zobaczyć efekt działania funkcji, ale nie może zostać on reprezentowany w formie wartości JavaScript. Moją zasadą jest starać się, aby istniały oba rodzaje funkcji, niezależnie od siebie. Tak wygląda napisana na nowo funkcja <code>yellIt</code>:</p>
 <pre><code class="lang-js">function yellIt(string) {
-  string = string.toUpperCase()
-  return makeMoreExciting(string)
+  string = string.toUpperCase();
+  return makeMoreExciting(string);
 }
 
-console.log(yellIt(&quot;nie boję się ludzi&quot;))
+console.log(yellIt(&quot;nie boję się ludzi&quot;));
 </code></pre>
 <p>W ten sposób <code>yellIt</code> staje się bardziej <strong>ogólne</strong>, co oznacza że funkcja spełnia wyłącznie swoje zadanie, nie wyświetlając wyniku &mdash; ta możliwość może zostać dodana później, poza deklaracją funkcji.</p>
 <h3 id="-a-id-loops-href-loops-a-p-tle"><a id="loops" href="#loops">#</a> Pętle</h3>
 <p>Teraz, gdy mamy pod pasem podstawowe umiejętności (<em>Od autora: czy koty noszą pasy?</em>) możemy się trochę rozleniwić. Co?! Tak, to prawda: programowanie uczy lenistwa. Larry Wall, twórca języka programowania Perl, nazwał lenistwo <a href="http://c2.com/cgi/wiki?LazinessImpatienceHubris">najważniejszą cechą</a> dobrego programisty. Jeżeli komputery nie wykonywałyby naszych zadań, musielibyśmy robić to wszystko ręcznie, zamiast opalać się w słońcu, podczas gdy program działa dla ciebie. Czy to nie wspaniałe?</p>
 <p>Pętle (<em>loops</em>) są jednym z najważniejszych sposobów na opanowanie możliwości komputera. Pamiętasz wspomniane wcześniej <code>Underscore.js</code>? Upewnij się, że załadowałeś je. (pamiętaj: możesz użyć strzałki w górę na klawiaturze i nacisnąć enter) i wklej ten kod w konsolę:</p>
 <pre><code class="lang-js">function logANumber(someNumber) {
-  console.log(someNumber)
+  console.log(someNumber);
 }
-_.times(10, logANumber)
+_.times(10, logANumber);
 </code></pre>
 <p>Ten kod używa metody Underscore o nazwie <a href="http://underscorejs.org/#times">times</a>, która pobiera jedną liczbę i funkcję, która wyświetla, ile razy wykorzystano funkcję.</p>
 <p><img src="images/times-loop.png" alt="console"></p>
 <p>Chcąc napisać to ręcznie, wyglądałoby to tak:</p>
-<pre><code class="lang-js">logANumber(0)
-logANumber(1)
-logANumber(2)
-logANumber(3)
-logANumber(4)
-logANumber(5)
-logANumber(6)
-logANumber(7)
-logANumber(8)
-logANumber(9)
+<pre><code class="lang-js">logANumber(0);
+logANumber(1);
+logANumber(2);
+logANumber(3);
+logANumber(4);
+logANumber(5);
+logANumber(6);
+logANumber(7);
+logANumber(8);
+logANumber(9);
 </code></pre>
 <p>Ale koty nigdy nie wykonują niepotrzebnej pracy, więc musisz pytać siebie, <em>„czy używam najbardziej leniwej metody, aby to wykonać?”</em>.</p>
 <p>Dlaczego jest to nazywane zapętlaniem? Pomyśl to tak. Jeżeli chcielibyśmy wypisać 10 cyfr (od 0 do 9) używając tablicy w JavaScript, wyglądałoby to tak:</p>
-<pre><code class="lang-js">var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+<pre><code class="lang-js">var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 </code></pre>
 <p>Metoda <code>times</code> w rzeczywistości tworzy taką tablicę i dla każdej liczby wykonuje zadanie: w tym przypadku wywołuje funkcję <code>logANumber</code> z obecną liczbą.</p>
 <h3 id="-a-id-arrays-href-arrays-a-tablice"><a id="arrays" href="#arrays">#</a> Tablice</h3>
 <p>Wspomniałem o nich już kilka razy, ale poświęćmy minutę, aby się ich nauczyć. Wyobraź sobie, że musisz, śledzić wszystkich swoich kocich towarzyszy. Z tablic będzie to proste. Myśl o tablicach, jak o uporządkowanych listach, w których możesz przechowywać wiele elementów.</p>
 <p>Jak utworzyć tablicę:</p>
-<pre><code class="lang-js">var myCatFriends = [&quot;bill&quot;, &quot;tabby&quot;, &quot;ceiling&quot;]
+<pre><code class="lang-js">var myCatFriends = [&quot;bill&quot;, &quot;tabby&quot;, &quot;ceiling&quot;];
 </code></pre>
 <p>Teraz masz listę swoich kocich przyjaciół!</p>
 <p>Elementy tablicy są przypisywane od numeru 0 w górę. Więc <code>myCatFriends[0]</code> zwraca <code>bill</code>, a <code>myCatFriends[1]</code> &mdash; <code>tabby</code>… itd.</p>
 <p>Aby uzyskać imiona przyjaciół z naszej nowej tablicy, możesz uzyskać dostęp bezpośrednio, np.:</p>
-<pre><code class="lang-js">console.log(myCatFriends[0])
+<pre><code class="lang-js">console.log(myCatFriends[0]);
 </code></pre>
 <p><img src="images/array-access.png" alt="console"></p>
-<p>Jeżeli byłeś w najmodniejszym klubie kota i zdobyłeś nowego przyjaciela ostatniej nocy, aby łatwo go dodać do tablicy, wprowadź: <code>myCatFriends.push(&quot;super hip cat&quot;)</code>.</p>
+<p>Jeżeli byłeś w najmodniejszym klubie kota i zdobyłeś nowego przyjaciela ostatniej nocy, aby łatwo go dodać do tablicy, wprowadź: <code>myCatFriends.push(&quot;super hip cat&quot;);</code>.</p>
 <p>Aby sprawdzić, czy nowy kot został dodany do tablicy, użyj <code>.length</code>:</p>
 <p><img src="images/array-push-length.png" alt="console"></p>
-<p>Zauważyłeś, że <code>push</code> zwróciło długość? Wygodnie! Pamiętaj też, że  i tablice zawsze <strong>zachowują kolejność</strong>, co oznacza, że pamiętają kolejność, w której dodano lub zdefiniowano elementy. Nie wszystko w JavaScript tak działa, więc zapamiętaj tą specyfikę tablic.</p>
+<p>Zauważyłeś, że <code>push</code> zwróciło długość? Wygodnie! Pamiętaj też, że  i tablice zawsze <strong>zachowują kolejność</strong>, co oznacza, że pamiętają kolejność, w której dodano lub zdefiniowano elementy. Nie wszystko w JavaScript tak działa, więc zapamiętaj tę specyfikę tablic.</p>
 <h3 id="-a-id-objects-href-objects-a-obiekty"><a id="objects" href="#objects">#</a> Obiekty</h3>
 <p>Tablice są dobre dla list, ale może być ciężko używać ich do innych działań. Wyobraź sobie tablicę kocich przyjaciół. Co, jeżeli chciałbyś przechować więcej, niż tylko imiona?</p>
-<pre><code class="lang-js">var myCatFriends = [&quot;bill&quot;, &quot;tabby&quot;, &quot;ceiling&quot;]
-var lastNames = [&quot;the cat&quot;, &quot;cat&quot;, &quot;cat&quot;]
-var addresses = [&quot;The Alley&quot;, &quot;Grandmas House&quot;, &quot;Attic&quot;]
+<pre><code class="lang-js">var myCatFriends = [&quot;bill&quot;, &quot;tabby&quot;, &quot;ceiling&quot;];
+var lastNames = [&quot;the cat&quot;, &quot;cat&quot;, &quot;cat&quot;];
+var addresses = [&quot;The Alley&quot;, &quot;Grandmas House&quot;, &quot;Attic&quot;];
 </code></pre>
 <p>Czasem dobrze jest trzymać wszystkie adresy i imiona w jednej wartości. Ale czasem masz „kota w mózgu”, więc chcesz przywołać Billa i sprawdzić jego adres. Z tablicami zajmuje to dużo pracy, ponieważ nie możesz powiedzieć „tablico, daj mi adres Bill” ponieważ Bill jest w jednej tablicy, a jego adres w zupełnie innej.</p>
 <p><img src="images/array-lookup.png" alt="console"></p>
 <p>Może to być nierozsądne, ponieważ jeżeli zmieni się zawartość tablicy i dodamy nowego kota na początek, powinniśmy zaktualizować też zmienną <code>billsPosition</code>, aby zawierała obecny adres Billa. Istnieje prostszy sposób na zarządzanie takimi danymi, wykorzystując obiekty:</p>
-<pre><code class="lang-js">var firstCat = { name: &quot;bill&quot;, lastName: &quot;the cat&quot;, address: &quot;The Alley&quot; }
-var secondCat = { name: &quot;tabby&quot;, lastName: &quot;cat&quot;, address: &quot;Grandmas House&quot; }
-var thirdCat = { name: &quot;ceiling&quot;, lastName: &quot;cat&quot;, address: &quot;Attic&quot; }
+<pre><code class="lang-js">var firstCat = { name: &quot;bill&quot;, lastName: &quot;the cat&quot;, address: &quot;The Alley&quot; };
+var secondCat = { name: &quot;tabby&quot;, lastName: &quot;cat&quot;, address: &quot;Grandmas House&quot; };
+var thirdCat = { name: &quot;ceiling&quot;, lastName: &quot;cat&quot;, address: &quot;Attic&quot; };
 </code></pre>
 <p>Dlaczego robimy to w ten sposób? Ponieważ teraz mamy zmienną dla każdego kota, której możemy użyć do przechowywania danych w wygodniejszy i czytelniejszy sposób.</p>
 <p><img src="images/object-lookup.png" alt="console"></p>
 <p>Możesz myśleć o obiektach jak o kluczach na breloku. Każdy jest przeznaczony do konkretnych drzwi, i jeżeli są one podpisane, możesz używać ich bez problemu. W rzeczywistości, elementy po lewej od dwukropka nazywane są <strong>kluczami</strong> (lub <strong>właściwościami*&quot;), a elementy po prawej to </strong>wartości** </p>
 <pre><code class="lang-js">// obiekt z kluczem &#39;name&#39; i jedną wartością &#39;bill&#39;
-{ name: &#39;bill&#39; }
+{ name: &#39;bill&#39; };
 </code></pre>
 <p>Dlaczego miałbyś więc używać tablic, kiedy możesz użyć obiektów? Niestety, obiekty nie zapamiętują kolejności wprowadzonych danych. Możesz zdefiniować obiekt tak:</p>
-<pre><code class="lang-js">{ date: &quot;10/20/2012&quot;, diary: &quot;spałem dziś trochę&quot;, name: &quot;Charles&quot; }
+<pre><code class="lang-js">{ date: &quot;10/20/2012&quot;, diary: &quot;spałem dziś trochę&quot;, name: &quot;Charles&quot; };
 </code></pre>
 <p>Ale komputer może go wyświetlić tak:</p>
-<pre><code class="lang-js">{ diary: &quot;spałem dziś trochę&quot;, name: &quot;Charles&quot;, date: &quot;10/20/2012&quot; }
+<pre><code class="lang-js">{ diary: &quot;spałem dziś trochę&quot;, name: &quot;Charles&quot;, date: &quot;10/20/2012&quot; };
 </code></pre>
 <p>Albo tak!</p>
-<pre><code class="lang-js">{ name: &quot;Charles&quot;, diary: &quot;spałem dziś trochę&quot;, date: &quot;10/20/2012&quot; }
+<pre><code class="lang-js">{ name: &quot;Charles&quot;, diary: &quot;spałem dziś trochę&quot;, date: &quot;10/20/2012&quot; };
 </code></pre>
 <p>Nie powinieneś więc ufać kolejności kluczy w obiektach. Jeżeli chcesz zrobić to naprawdę dobrze, możesz utworzyć tablicę wypełnioną obiektami, lub obiekt zawierający tablice!</p>
 <pre><code class="lang-js">var moodLog = [
@@ -233,42 +242,42 @@ var thirdCat = { name: &quot;ceiling&quot;, lastName: &quot;cat&quot;, address: 
     date: &quot;10/22/2012&quot;,
     mood: &quot;mruczący&quot;
   }
-]
+];
 
 // segregowane od najmniej do najbardziej ulubionych
 var favorites = {
   treats: [&quot;obserwacja ptaków&quot;, &quot;pocieranie brzucha&quot;, &quot;kocimiętka&quot;],
   napSpots: [&quot;sofa&quot;, &quot;skrzynka&quot;, &quot;ludzka twarz&quot;]
-}
+};
 </code></pre>
 <p>Kiedy łączysz różne rodzaje kontenerów, tworzysz <strong>struktury danych</strong>, jak z klocków lego!</p>
 <h3 id="-a-id-callbacks-href-callbacks-a-wywo-ania-zwrotne"><a id="callbacks" href="#callbacks">#</a> Wywołania zwrotne</h3>
 <p>Wywołania zwrotne nie są w rzeczywistości możliwością JavaScript, tak jak obiekty czy tablice, są natomiast jednym ze sposobów na używanie funkcji. Aby zrozumieć, dlaczego odwołania są przydatne, musisz najpierw rozumieć programowanie asynchroniczne (często skracane do <strong>async</strong>). Asynchroniczny kod z definicji jest kodem pisanym w niesynchroniczny sposób. Kod synchroniczny jest prosty do zrozumienia i napisania. Przykład:</p>
-<pre><code class="lang-js">var photo = download(&#39;http://foo-chan.com/images/sp.jpg&#39;)
-uploadPhotoTweet(photo, &#39;@maxogden&#39;)
+<pre><code class="lang-js">var photo = download(&#39;http://foo-chan.com/images/sp.jpg&#39;);
+uploadPhotoTweet(photo, &#39;@maxogden&#39;);
 </code></pre>
-<p>Ten synchroniczny <a href="http://pl.wikipedia.org/wiki/Pseudokod">pseudokod</a> pobiera zdjęcie słodkiego kotka, wysyła je na Twitterze i twittuje do <code>@maxogden</code>. Proste i zrozumiałe!</p>
+<p>Ten synchroniczny <a href="http://pl.wikipedia.org/wiki/Pseudokod">pseudokod</a> pobiera zdjęcie słodkiego kotka, wysyła je na Twitterze i tweetuje do <code>@maxogden</code>. Proste i zrozumiałe!</p>
 <p>(<em>Od autora: Ja, @maxogden z radością przyjmę każde zdjęcie kota na Twitterze</em>)</p>
 <p>Ten kod jest synchroniczny, ponieważ aby zdjęcie zostało wysłane na Twittera, musi zostać pobrane. Oznacza to, że 2 wiersz nie może zostać wykonany przed zakończeniem 1. Jeżeli chcielibyśmy zaimplementować ten kod, musimy się upewnić, że pobieranie „zablokowało” wykonywanie dalszego kodu, dopóki się nie zakończy, a po zakończeniu, pozwoli na wykonanie dalszego kodu i wykona się drugi wiersz.</p>
 <p>Synchroniczny kod jest dobry, kiedy rzeczy dzieją się szybko, ale jest okropny, gdy coś wymaga zapisania, ładowania, pobierania i wysyłania. Co, jeśli serwer z którego pobierasz zdjęcie jest powolny, twoje połączenie z internetem jest powolne, lub komputer z którego korzystasz ma uruchomione za dużo kart z kocimi filmikami, więc działa wolniej? Oznacza to, że będzie trzeba poczekać, zanim 2 linia kodu zostanie wykonana. W międzyczasie, ponieważ cały JavaScript ze strony nie może być wykonywany, strona zamrozi się i utraci responsywność, zanim ukończy się pobieranie.</p>
 <p>Blokowanie wykonywania powinno być unikane za wszelką cenę, szczególnie gdy czyni program nieresponsywnym lub mrozi go. Załóżmy, że pobieranie zdjęcia zajmuje jedną sekundę. Aby zilustrować, ile znaczy sekunda dla współczesnego komputera, tutaj znajduje się program, który obliczy, ile zadań potrafi wykonać JavaScript w przeciągu sekundy.</p>
 <pre><code class="lang-js">function measureLoopSpeed() {
-  var count = 0
-  function addOne() { count = count + 1 }
+  var count = 0;
+  function addOne() { count = count + 1 };
 
   // Date.now() zwraca ogromną liczbę wyrażoną w milisekundach,
-  // które minęły od 1 stycznia 1970
-  var now = Date.now()
+  // które minęły od 1 stycznia 1970;
+  var now = Date.now();
 
   // Zapętl tak długo, jak Date.now() nie będzie o 1000 milisekund (1 sekunda) lub
   // więcej od początku pętli. Za każdym razem użyj addOne()
-  while (Date.now() - now &lt; 1000) addOne()
+  while (Date.now() - now &lt; 1000) addOne();
 
   // Kiedy będzie to &gt;= 1000ms, wypiszmy liczbę wykonanych zadań
-  console.log(count)
+  console.log(count);
 }
 
-measureLoopSpeed()
+measureLoopSpeed();
 </code></pre>
 <p>Wklej ten kod do swojej konsoli JavaScript, a po sekundzie otrzymasz wypisaną liczbę. Na moim komputerze jest to <code>8527360</code>, czyli około <strong>8,5 miliona</strong>. W ciągu jednej sekundy JavaScript może wywołać funkcję <code>addOne</code> 8,5 miliona razy! Więc, pobierając zdjęcie kodem synchronicznym, potencjalnie zatrzymuje wykonywanie aż 8,5 miliona operacji!</p>
 <p>Niektóre języki posiadają funkcję <code>sleep</code>, która blokuje wykonywanie kodu na kilka sekund. Dla przykładu, kod <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29"><code>bash</code></a>a uruchomiony na dystrybucji GNU/Linuxa używający polecenia <code>sleep</code>. Po wykonaniu <code>sleep 3 &amp;&amp; echo &#39;koniec snu&#39;</code>, po 3 sekundach zostanie wyświetlony tekst <code>koniec snu</code>.</p>
@@ -290,7 +299,7 @@ b();
     if (error) console.log(&#39;kruci hegot, niedoróba!&#39;, error);
 
     // wywołaj, jeśli wszystko się wykonało
-    done()
+    done();
   })
 }
 </code></pre>
