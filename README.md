@@ -400,7 +400,7 @@ W zasadzie to dopiero początek twojej przygody z JavaScript! Nie nauczysz się 
 
 Polecam wrócić tu jutro i przejrzeć ten kurs od początku! Może będziesz musiał próbować kilka razy, zanim wszystko zrozumiesz (programowanie jest czasem trudne). Spróbuj też nie czytać tej strony w pokojach zawierających błyszczące przedmioty. To może rozpraszać…
 
-Chcesz, aby poruszono tu inny temat? Zgłoś na [stronie oryginalnego projektu](http://github.com/maxogden/javascript-for-cats) lub [stronie polskiego tłumaczenia](http://github.com/m4sk1n/jscatspl) w serwisie GitHub.
+Chcesz, aby poruszono tu inny temat? Zgłoś na [stronie oryginalnego projektu](http://github.com/maxogden/javascript-for-cats) lub [stronie polskiego tłumaczenia](http://github.com/mkljczk/jscatspl) w serwisie GitHub.
 
 ### <a id="recommended-reading" href="#recommended-reading">#</a> Do przeczytania
 
@@ -420,5 +420,5 @@ Chcesz, aby poruszono tu inny temat? Zgłoś na [stronie oryginalnego projektu](
 <center>![satisfied customer](images/customers3.png)</center>
 <center>![satisfied customer](images/customers4.png)</center>
 
-*JSForCats.com jest darem miłości od [@maxogden](http://twitter.com/maxogden). Jeżeli chcesz uczynić poradnik lepszym, zapraszam [tutaj](http://github.com/maxogden/javascript-for-cats) (oryginalna, angielska wersja na licencji CC-0) lub [tutaj](http://github.com/m4sk1n/jsforcats) (polskie tłumaczenie)*
+*JSForCats.com jest darem miłości od [@maxogden](http://twitter.com/maxogden). Jeżeli chcesz uczynić poradnik lepszym, zapraszam [tutaj](http://github.com/maxogden/javascript-for-cats) (oryginalna, angielska wersja na licencji CC-0) lub [tutaj](http://github.com/mkljczk/jsforcats) (polskie tłumaczenie)*
 <center>![console](images/awesome.jpg)</center>
